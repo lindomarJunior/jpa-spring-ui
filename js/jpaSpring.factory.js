@@ -3,7 +3,7 @@ angular.module("jpaSpringApp").factory("jpaSpringCursoFactory", function($q, $ht
 		listar: function(){
 			var promessa = $q.defer();
 
-			$http.get("http://localhost:8080/curso").then(function(result){
+			$http.get("https://jpa-spring.herokuapp.com/curso").then(function(result){
 				var cursos = result.data;
 				promessa.resolve(cursos);
 			})
